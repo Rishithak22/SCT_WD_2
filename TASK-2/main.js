@@ -21,7 +21,7 @@ window.onload = function() {
         }
         if (tens > 99){
             seconds++
-            appendSeconds.innerHTML = '0' + seconds
+            appendSeconds.innerHTML = (seconds <= 9) ? '0' + seconds : seconds
             tens = 0
             appendTens.innerHTML = '0' +0;
         }
@@ -29,10 +29,10 @@ window.onload = function() {
             appendSeconds.innerHTML = seconds
         }
         if (seconds >= 60){
-            minutes++
-            appendMinutes.innerHTML = (minutes <= 9)'0' + minutes: minutes;
-            seconds =0;
-            appendSeconds.innerHTML = '0' +0;
+            mintues++;  
+            appendMinutes.innerHTML = (minutes <= 9) ? '0' + minutes : minutes
+            seconds = 0;
+            appendSeconds.innerHTML = '0' + 0;
         }
     }; 
     startBtn.onclick = () => {
@@ -46,9 +46,9 @@ window.onload = function() {
         clearInterval(Interval)
         tens = 0
         seconds = 0
-        minutes = 0
-        appendTens.innerHTML = tens;
-        appendSeconds.innerHTML = seconds;
-        appendMinutes.innerHTML = minutes;
+        mintues = 0
+        appendTens.innerHTML = '00';
+        appendSeconds.innerHTML = '00';
+        appendMinutes.innerHTML = '00';
     };
 };
