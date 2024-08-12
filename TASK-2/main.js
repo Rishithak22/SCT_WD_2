@@ -2,7 +2,7 @@ window.onload = function() {
     let mintues = 0;
     let seconds = 0;
     let tens = 0;
-    let appendMintues = document.querySelector('#minutes');
+    let appendMinutes = document.querySelector('#minutes');
     let appendTens = document.querySelector('#tens');
     let appendSeconds = document.querySelector('#seconds');
 
@@ -28,9 +28,9 @@ window.onload = function() {
         if (seconds > 9){
             appendSeconds.innerHTML = seconds
         }
-        if (seconds > 59){
-            mintues++
-            appendMintues.innerHTML = '0' + mintues;
+        if (seconds >= 60){
+            minutes++
+            appendMinutes.innerHTML = (minutes <= 9)'0' + minutes: minutes;
             seconds =0;
             appendSeconds.innerHTML = '0' +0;
         }
@@ -44,11 +44,11 @@ window.onload = function() {
     }
     resetBtn.onclick = () => {
         clearInterval(Interval)
-        tens = '00'
-        seconds = '00'
-        mintues = '00'
+        tens = 0
+        seconds = 0
+        minutes = 0
         appendTens.innerHTML = tens;
         appendSeconds.innerHTML = seconds;
-        appendMintues.innerHTML = mintues;
+        appendMinutes.innerHTML = minutes;
     };
 };
