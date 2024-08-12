@@ -1,5 +1,5 @@
 window.onload = function() {
-    let mintues = 0;
+    let minutes = 0;
     let seconds = 0;
     let tens = 0;
     let appendMinutes = document.querySelector('#minutes');
@@ -29,7 +29,7 @@ window.onload = function() {
             appendSeconds.innerHTML = seconds
         }
         if (seconds >= 60){
-            mintues++;  
+            minutes++;  
             appendMinutes.innerHTML = (minutes <= 9) ? '0' + minutes : minutes
             seconds = 0;
             appendSeconds.innerHTML = '0' + 0;
